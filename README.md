@@ -1,25 +1,51 @@
-# 2006 Frank Jamison Portfolio
+# 2006-FrankJamison (Portfolio)
 
-This is a personal portfolio website for Frank Jamison, showcasing work, documents, and images from 2006.
+Static portfolio site for the **2006 Frank Jamison** project.
 
 ## Project Structure
 
-- `index.html` — Main landing page
-- `css/styles.css` — Stylesheet for the website
-- `documents/` — Folder for documents
-- `images/` — Folder for images
+- `index.html` — main page
+- `css/` — stylesheets
+  - `css/styles.css` — site styles
+- `images/` — image assets
+- `documents/` — downloadable documents/assets
 
-## Local Development
+## Preview / Run
 
-To view the site locally:
-1. Ensure you have Chrome installed.
-2. Run the provided VS Code task "Open in Browser" or open `http://2006frankjamison.localhost/` in your browser.
+This project is plain HTML/CSS (no build step).
 
-## Features
-- Simple, static HTML/CSS site
-- Organized folders for documents and images
-- Easy to extend and customize
+### Option A: Open the file directly
 
-## License
+You can double-click `index.html` to open it in your browser.
 
-This project is for personal and educational use. Contact Frank Jamison for other uses.
+Note: some browsers enforce restrictions when opening local files (for example, certain font or fetch requests). If you run into anything like that, use a local server (Option B).
+
+### Option B: Serve with any local web server (recommended)
+
+From this project folder, start a static server and open the URL it prints.
+
+Examples:
+
+- Python: `python -m http.server`
+- Node: `npx serve`
+
+Typical URLs look like `http://localhost:8000/` or `http://localhost:3000/`.
+
+### Option C: Use the VS Code task (if available)
+
+This workspace may include a VS Code task named **Open in Browser**. If it exists, you can run it to launch the site using your local setup.
+
+## Editing Content
+
+- HTML structure and content live in `index.html`.
+- Styles are in `css/styles.css`.
+- Add or replace images in `images/` and reference them from HTML/CSS using relative paths.
+- Add PDFs or other downloads in `documents/` and link them from `index.html`.
+
+## Deployment
+
+Because everything is static, deployment is just copying files to a web host.
+
+- Upload `index.html`, `css/`, `images/`, and `documents/` to the same folder on your server.
+- Keep paths relative (e.g., `css/styles.css`, `images/...`) so the site works when hosted at different URLs.
+- If you host under a subfolder (not the domain root), relative links will typically still work as long as you keep the same folder structure.
